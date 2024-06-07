@@ -26,6 +26,11 @@ const publicDirectory = path.join(__dirname, './public')
 //make sure express is using public directory
 app.use(express.static(publicDirectory))
 
+//Parse URL encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({ extended: false }))
+//Parse JSON bodies (as sent by API clients)
+app.use(express.json())
+
 //which view engine I'm using
 app.set('view engine', 'hbs')
 
@@ -37,15 +42,10 @@ database.connect( (err) => {
     }
 })
 
-app.get("/", (req, res) => {
-    //res.send("<h1>Home Page<h1>")
-    res.render("index")
-})
-
-app.get("/register", (req, res) => {
-    //res.send("<h1>Home Page<h1>")
-    res.render("register")
-})
+//Define Router
+//Any occurency of '/' it will verify on routes/pages if the route exist 
+app.use('/', require('./routes/pages'))
+app.use('/auth', require('./routes/auth'))
 
 app.listen(5000, () => {
     console.log("Server started on Port 5000")
