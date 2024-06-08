@@ -1,1 +1,13 @@
-![login_page](https://github.com/ImNotMenduina/Login-Nodejs-MYSQL/assets/100011745/e8eb1fba-3ec2-4d05-b870-ccd840cbcb36)
+<h1>Login Project</h1>
+
+[![My Skills](https://skillicons.dev/icons?i=git,mysql,nodejs,bootstrap)](https://skillicons.dev)
+
+<h2>Overview</h2>
+<p>[EN]</p>
+<p>
+The Login Project is a simple application that allows users to register their accounts using their name, email, and password. In this project, I'm practicing integrating databases, SQL statements, and Node.js logic to manage routes and connections. Furthermore, the MVC architecture (Model, View, Controller) is another important topic in software engineering, which is why I'm applying these concepts.
+</p>
+  
+<div align="left">
+  <img src="https://github.com/ImNotMenduina/Login-Nodejs-MYSQL/assets/100011745/e8eb1fba-3ec2-4d05-b870-ccd840cbcb36">
+</div>
